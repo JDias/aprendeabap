@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<HTML>
+  <head>
+    <title>Tema 1</title>
+    <script src="BaseController.js"></script>
+  </head>
+  <body>
+
+    <h1>Resumen SAP/ABAP</h1>
+    <h2>Evolución SAP</h2>
+    <p>El texto narra la evolución de SAP desde su fundación en 1972 por ex empleados de IBM. Iniciaron como Systemanalyse und Programmentwicklung (SAP) para desarrollar sistemas en tiempo real en lugar de mainframes. Empezaron con contabilidad, creando módulos que se convirtieron en R/1. Luego vino R/2 en 1979 y R/3 en 1992, expandiéndose internacionalmente.</p>
+
+    <p>En los años 90, SAP adoptó reingeniería IT y lanzó SAP ERP para eficiencia y reemplazar sistemas legacy. El bug Y2K motivó a algunas empresas a adoptar SAP ERP. En 1999, se sumaron al comercio electrónico con mySAP.com y adquirieron TopTier.</p>
+
+    <p>En 2004, lanzaron SAP NetWeaver y enfocaron la arquitectura orientada a servicios (SOA). En 2009, presentaron SAP Business Suite 7. El cambio más grande llegó en 2010 con SAP HANA, un sistema de base de datos en memoria. Luego lanzaron S/4 HANA en 2015, con interfaz SAP Fiori, diseño BBDD simple y procesamientos combinados.</p>
+
+    <p>Actualmente, SAP ofrece productos alojados en la nube e integra diversas soluciones. ABAP sigue siendo importante para la interacción con sistemas SAP. La historia de SAP influye en su sistema presente, y es crucial conocerla como desarrollador ABAP para trabajar con éxito en los sistemas SAP.</p>
+
+    <h2>Navegacion en sistema ABAP</h2>
+    Hay varias vías de interacción con un sistema SAP NetWeaver. Estas son: <br>
+    <p><h4>SAP GUI (SAP Graphical User Interface)</h4>
+     es la interfaz gráfica de usuario proporcionada por SAP para interactuar con sus sistemas empresariales. Es una aplicación de escritorio que permite a los usuarios acceder y trabajar con diversas funcionalidades y procesos dentro de los sistemas SAP. A través de SAP GUI, los usuarios pueden realizar tareas como ingresar datos, ejecutar transacciones, acceder a informes y gestionar procesos empresariales clave en un entorno intuitivo y amigable.</p> 
+    <h4>SAP NetWeaver Business Client (NWBC)</h4>
+    SAP NetWeaver Business Client (NWBC) es una plataforma de software de SAP que brinda una experiencia unificada y personalizable para acceder y trabajar con diversas aplicaciones empresariales. Permite a los usuarios interactuar con aplicaciones SAP y no SAP en un entorno único y moderno, con una interfaz flexible que se adapta a las necesidades y roles individuales. NWBC simplifica la experiencia del usuario al consolidar múltiples funciones en una ventana, mejorando la eficiencia y facilitando la navegación entre tareas y procesos empresariales.
+    <h4>Aplicaciones SAP Fiori</h4>
+    SAP Fiori es una serie de aplicaciones basadas en HTML5 que emplean el marco JavaScript SAPUI5 y el tema Fiori de SAP. Muchas de estas aplicaciones requieren SAP HANA como base, permitiendo un procesamiento analítico y transaccional. Las apps Fiori están organizadas en la pantalla Launchpad como "losas" o "tiles". Aunque la interfaz Fiori se construye en HTML5 y JavaScript, aún necesita el respaldo del backend ABAP para conectar con la base de datos y procesar información.
+    <h2>Visión lógica del sistema ABAP</h2>
+    Esta sección abarca la arquitectura técnica de los sistemas ABAP y una revisión de tópicos cruciales para los desarrolladores ABAP.</br>En todos los sistemas ABAP, se incorpora el control de versión y un sistema de gestión de transportes, permitiendo a desarrolladores y configuradores efectuar cambios en el sistema de desarrollo y trasladarlos a distintos entornos.
+    <h4>Arquitectura cliente/servidor</h4>
+    Los sistemas ABAP siguen una estructura cliente/servidor, donde el código escrito por un desarrollador ABAP se ejecuta en el servidor ABAP y es accesible a través de diversas interfaces como apps Fiori, SAP GUI o aplicaciones personalizadas mediante RFC. El servidor trabaja con la base de datos (BBDD), que antes de S/4 HANA incluía varias opciones, pero ahora se limita a la BBDD SAP HANA, que también puede utilizarse en sistemas no S/4 HANA.
+    <br>En esta sección, el término "cliente" se refiere al entorno utilizado para acceder al sistema. En el contexto de sistemas ABAP, "cliente" (mandante) se emplea para separar los datos del sistema. Cada tabla en ABAP tiene un campo clave que representa el mandante, lo que permite a una empresa tener mandantes diferentes para distintos negocios, como uno para Francia y otro para España. Aunque los programas ABAP son iguales en ambos mandantes, los usuarios ven solo los datos de su mandante.</br>
+    <br>Al configurar un sistema ABAP, la dependencia del mandante permite que el sistema funcione de forma ligeramente diferente según el mandante del usuario, aunque tener múltiples mandantes no es obligatorio.</br>
+    <h4>Jobs</h4>
+    Optimización y Uso de Jobs en Fondo para Procesamiento Eficiente<br>
+
+    <br>El texto aborda el proceso de planificación y ejecución de programas en los sistemas SAP R/3 y S/4 HANA. A pesar de la capacidad de procesamiento en tiempo real de R/3, se presenta la opción de ejecutar programas como "Jobs en fondo". S/4 HANA ha reducido la necesidad de esta práctica al optimizar el análisis instantáneo en los datos transaccionales.</br>
+
+    <br>En ciertas situaciones, los programas se ejecutan como "Jobs en fondo" debido a su consumo prolongado de tiempo, como cambios masivos de datos. En otros casos, la elección de esta ejecución se debe a horarios específicos.</br>
+    
+    <textarea id="story" name="story" rows="5" cols="33"> </textarea>
+
+  </body>
+  
+</HTML>
