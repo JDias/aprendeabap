@@ -3,6 +3,7 @@
   <head>
     <title>Tema 1</title>
     <script src="BaseController.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
 
@@ -36,8 +37,35 @@
     <br>El texto aborda el proceso de planificación y ejecución de programas en los sistemas SAP R/3 y S/4 HANA. A pesar de la capacidad de procesamiento en tiempo real de R/3, se presenta la opción de ejecutar programas como "Jobs en fondo". S/4 HANA ha reducido la necesidad de esta práctica al optimizar el análisis instantáneo en los datos transaccionales.</br>
 
     <br>En ciertas situaciones, los programas se ejecutan como "Jobs en fondo" debido a su consumo prolongado de tiempo, como cambios masivos de datos. En otros casos, la elección de esta ejecución se debe a horarios específicos.</br>
+    <br>Aquellos programas que tardan más de la cuenta en ejecutarse, pueden ser seleccionados para
+ejecutarlos como Jobs en fondo en SAP GUI</br>
     
-    <textarea id="story" name="story" rows="5" cols="33"> </textarea>
+    
+    <div class="textarea-container" align='center'>
+      <label for="story">Pasos para Ejecutar Programas como Jobs en Fondo en SAP GUI:</label>
+      <textarea disabled id="story" name="story" rows="10" cols="80">
+
+      1. Si el programa tiene una pantalla de selección, ejecútalo normalmente proporcionando los datos requeridos en dicha pantalla.
+
+      2. Una vez que el programa esté en la pantalla de selección o en proceso, dirígete al menú "PROGRAMA" en la barra superior de SAP GUI.
+
+      3. Desde el menú "PROGRAMA", elige la opción "Ejecutar en Proceso Fondo". Esta opción permitirá que el programa se ejecute en segundo plano.
+
+      4. Si es necesario, introduce los datos relevantes en la pantalla de selección y confirma la ejecución en proceso de fondo.
+
+      5. Abre la transacción "SM37" en SAP GUI. Esto te llevará a la pantalla de seguimiento de trabajos (jobs).
+
+      6. En la pantalla de selección de la transacción "SM37", observarás los campos "Job" y "Nombre de Usuario". Si deseas ver los programas ejecutados en fondo según una fecha específica, proporciona esa fecha en los campos correspondientes. Si deseas ver todos los jobs, deja los campos "Job" y "Nombre de Usuario" en blanco o coloca un asterisco (*).
+
+      7. Después de aplicar los filtros, la pantalla mostrará los jobs que se ejecutaron en segundo plano según los criterios especificados. Aquí podrás ver el estado de cada job y otros detalles relevantes.
+       </textarea> 
+    </div>
+
+    <h4>Sandbox, DEV, QAS y PRO</h4>
+    En una implementación típica de ABAP, los clientes tienen varios entornos, incluyendo sandbox, desarrollo, calidad y producción. Los cambios se realizan en el entorno de desarrollo y luego se prueban en calidad antes de pasar a producción. <br>
+    <br>La configuración exacta varía según la empresa. Los sistemas están conectados a través del Sistema de Gestión de Transportes de SAP (TMS), que utiliza órdenes de transporte para mover cambios. La transacción STMS muestra la configuración del TMS. <br>
+    <br>Después de hacer cambios, se pueden liberar usando STMS o Eclipse IDE. Se recomienda contactar al equipo de Sistemas para los pasos exactos. Los cambios pueden mantenerse localmente en desarrollo sin necesidad de transporte para ejecutar o probar.
+    <img alt="Descripción de la imagen" src="stms.png">
 
   </body>
   
